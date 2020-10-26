@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    body {
+    background: linear-gradient(90deg, rgba(254,151,54,1) 0%, rgba(255,208,37,1) 8%, rgba(255,240,158,1) 16%, rgba(254,151,54,1) 100%);
+    background-size: 400% 400%;
+    }
+    </style>
+</head>
+
+<body>
+<div class = "container w-50 bg-white p-3 mb-3 mt-5 rounded">
+    <h1 class= "text-center pt-5">Login</h1>
+    <form action= "login-form" method="get">
+        <div class = "form-group">
+            <label for="exampleInputEmail1">Adresa de email</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone else</small>
+        </div>
+
+        <div class = "form-group">
+            <label fpr="exampleInputPassword1">Parola</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <p th:text="${message}"></p>
+
+        <button type = "submit" class = "btn btn-primary" style = "color: #fff; background-color: #fe9736; border-color: #fe9736;">Login</button>
+        <hr/>
+        <br>
+        <br>
+        <br>
+        <p class = "text-secondary">Don't have an account? Register here</p>
+
+        <a href = "/register" class = "btn btn-secondary">Register</a>
+    </form>
+</div>
+</body>
+</html>
